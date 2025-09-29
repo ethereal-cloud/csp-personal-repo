@@ -31,7 +31,6 @@ loop_head:
     lw      t2, -4(s0)         # t2 = n
     bgt     t1, t2, loop_end   # if i > n break
 
-    # f = f * i  (32-bit semantics -> 使用 mulw)
     lw      t3, -12(s0)        # t3 = f
     mulw    t3, t3, t1
     sw      t3, -12(s0)
